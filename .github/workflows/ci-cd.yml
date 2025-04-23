@@ -43,4 +43,4 @@ jobs:
             docker pull ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/iris-classifier:latest
             docker stop iris-classifier || true # In case the container doesn't exist yet
             docker rm iris-classifier || true
-            docker run -d -p 80:5000 --name iris-classifier ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/iris-classifier:latest 
+            docker run -d -p 80:4000 --name iris-classifier ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/iris-classifier:latest 
