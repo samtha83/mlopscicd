@@ -7,7 +7,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 5003
+EXPOSE 4000
 
 # Command to start your web server 
 CMD ["python", "src/app.py"]  
